@@ -1,0 +1,18 @@
+services:
+  sentinel:
+    build: .
+    env_file: .env
+    environment:
+      PORT: "8080"
+    volumes:
+      - ./config.json:/app/config.json:ro
+    ports:
+      - "127.0.0.1:8080:8080"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 64
+    mem_limit: 256m
+    stop_grace_period: 90s
+    restart: unless-stopped

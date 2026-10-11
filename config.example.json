@@ -1,0 +1,10 @@
+{
+  "guilds": [
+    {
+      "id": "YOUR_GUILD_ID",
+      "roles": ["YOUR_INVESTIGATOR_ROLE_ID"],
+      "pentest_roles": ["YOUR_PENTEST_ROLE_ID"]
+    }
+  ],
+  "targets": []
+}
